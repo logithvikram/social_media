@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import authReducer from "./state";
@@ -30,15 +30,13 @@ const store = configureStore({
     }),
 });
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistStore(store)}>
         <App />
       </PersistGate>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
-

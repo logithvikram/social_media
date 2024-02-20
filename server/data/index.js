@@ -174,8 +174,8 @@ export const posts = [
       "Another really long random description. This one is longer than the previous one.",
     picturePath: "post2.jpeg",
     userPicturePath: "p6.jpeg",
-    likes: new Map([
-      [userIds[7], true], 
+    likes: new Map([ 
+      [userIds[7], true],   
       [userIds[4], true],
       [userIds[1], true],
       [userIds[2], true],
